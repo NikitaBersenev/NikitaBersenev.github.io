@@ -22,7 +22,7 @@ interface Props {
 
 function ImageLogo({theme} : Props) {
     if (theme == "light") {
-        return <Image style={{filter: "invert(100%)"}} src="/src/assets/logo.jpg" alt="Logo" height="100px"/>;
+        return <Image style={{filter: "invert(100%)"}} src={require('./logo.jpeg')} alt="Logo" height="100px"/>;
     }
     return <Image src="/src/assets/logo.jpg" alt="Logo" height="100px"/>;
 }
