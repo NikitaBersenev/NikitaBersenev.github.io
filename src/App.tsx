@@ -48,7 +48,7 @@ function App() {
                     <Spacer/>
                     <Card>
                         <Text h2>Article 1</Text>
-                        <Text>Description of Article 1.</Text>
+                        <Text>Description of Article 1</Text>
                     </Card>
                     <Spacer/>
                     <Card>
