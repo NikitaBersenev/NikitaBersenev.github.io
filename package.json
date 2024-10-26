@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "ghpages": "npm run build && git saveall && git subtree push --prefix dist origin gh-pages",
+    "ghpages": "npm run build && git saveall && git resetbranch gh-pages && git subtree push --prefix dist origin gh-pages",
     "preview": "vite preview"
   },
   "dependencies": {
