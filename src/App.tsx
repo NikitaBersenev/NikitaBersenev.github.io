@@ -37,6 +37,20 @@ function App() {
         switch (activeTab) {
             case 'home':
                 return <>
+
+                    <ul className="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     <Spacer h={10}/>
                     <Text h1>Portfolio</Text>
                     <Text h1>Nikita Bersenev</Text>
@@ -52,7 +66,7 @@ function App() {
                     </Card>
                     <Spacer/>
                     <Card>
-                        <Text h2>Article 2</Text>
+                    <Text h2>Article 2</Text>
                         <Text>Description of Article 2.</Text>
                     </Card>
                     <Spacer/>
