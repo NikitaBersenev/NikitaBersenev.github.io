@@ -22,9 +22,9 @@ interface Props {
 
 function ImageLogo({theme} : Props) {
     if (theme == "light") {
-        return <Image style={{filter: "invert(100%)"}} src="/src/assets/logo.jpg" alt="Logo" height="100px"/>;
+        return <Image style={{filter: "invert(100%)"}} src="/src/assets/logo.jpg" alt="Logo" height="50px"/>;
     }
-    return <Image src="/src/assets/logo.jpg" alt="Logo" height="100px"/>;
+    return <Image src="/src/assets/logo.jpg" alt="Logo" style={{minHeight: "50px", minWidth: "50px"}} height="50px" width="50px" />;
 }
 
 function App() {
@@ -107,16 +107,16 @@ function App() {
                 <GeistProvider themeType={themeType}>
                     <CssBaseline/>
                     <Grid.Container alignItems="flex-start" height={2} marginTop={-2} direction={"row"}>
-                        <Grid xs={1} justify="flex-start" alignContent={"center"} alignItems={"center"}
+                        <Grid xs={4} sm={3} md={2} lg={1} justify="flex-start" alignContent={"center"} alignItems={"center"}
                               direction={"row"}
                               height={1}>
                             <ImageLogo theme={themeType}/>
                         </Grid>
-                        <Grid xs={8} alignContent={"center"} alignItems={"center"} direction={"row"} height={2}
+                        <Grid xs={4} sm={3} md={2} lg={1} alignContent={"center"} alignItems={"center"} direction={"row"} height={2}
                               justify="flex-start">
                             <Text h3>Habe</Text>
                         </Grid>
-                        <Grid xs={10} justify={"flex-start"} alignContent={"center"} alignItems={"center"}
+                        <Grid xs={0} sm={15} md={16} lg={20} justify={"center"} alignContent={"center"} alignItems={"center"}
                               direction={"row"}
                               height={2}>
                             <Tabs hideDivider hideBorder value={activeTab} onChange={setActiveTab}>
@@ -126,7 +126,7 @@ function App() {
                                 <Tabs.Item value="contacts" label="Contacts"/>
                             </Tabs>
                         </Grid>
-                        <Grid xs={2} justify={"flex-start"} alignContent={"center"} alignItems={"center"}
+                        <Grid xs={0} sm={3} md={4} lg={2} justify={"flex-start"} alignContent={"center"} alignItems={"center"}
                               direction={"row"}
                               height={2}>
                             <Link placeholder onPointerEnterCapture onPointerLeaveCapture
@@ -138,7 +138,6 @@ function App() {
                                     placeholder onPointerEnterCapture onPointerLeaveCapture
                                     iconRight={<><IoMoonOutline fontSize="40px"/> &nbsp; Theme</>} auto
                                     scale={10 / 70}/>
-
                         </Grid>
                     </Grid.Container>
 
