@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 .circles{
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;

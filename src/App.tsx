@@ -37,7 +37,6 @@ function App() {
         switch (activeTab) {
             case 'home':
                 return <>
-
                     <ul className="circles">
                         <li></li>
                         <li></li>
@@ -54,7 +53,6 @@ function App() {
                     <Spacer h={10}/>
                     <Text h1>Portfolio</Text>
                     <Text h1>Nikita Bersenev</Text>
-                    <Text></Text>
                 </>
             case 'blog':
                 return (<>
@@ -105,7 +103,7 @@ function App() {
 
     return (
         <>
-            <Page>
+            <Page style={{zIndex: 200000}}>
                 <GeistProvider themeType={themeType}>
                     <CssBaseline/>
                     <Grid.Container alignItems="flex-start" height={2} marginTop={-2} direction={"row"}>
