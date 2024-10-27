@@ -1,0 +1,20 @@
+name: start test and deploy
+
+on:
+  push:
+    branches: [deploy]
+
+jobs:
+  deploy:
+    name: deploy to server
+    runs-on: self-hosted
+#    needs: test
+    steps:
+      - name: kill
+        run: sudo bash -c "pkill server-localhost-main -f"
+      - name: checkout branch
+        run: cd /home/habe/NikitaBersenev.github.io/ && git checkout deploy
+      - name: git pull
+        run: cd /home/habe/NikitaBersenev.github.io/ && git pull --allow-unrelated-histories -X theirs --no-edit
+      - name: run
+        run: cd /home/habe/NikitaBersenev.github.io/ && sudo bash -c "npm run dev"
