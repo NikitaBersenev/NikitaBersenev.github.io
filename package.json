@@ -1,0 +1,37 @@
+{
+  "name": "nikitabersenev-github-io",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev80": "vite --host dextreme.ru --port 80",
+    "build": "tsc -b && vite build",
+    "deploy": "npm run build && git mergeback deploy",
+    "lint": "eslint .",
+    "ghpages2": "npm run build && git saveall && git resetbranch gh-pages && git subtree push --prefix dist origin gh-pages",
+    "ghpages": "npm run build && git saveall && git subpush gh-pages dist",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@geist-ui/core": "^2.3.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.27.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.8.1",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.13",
+    "globals": "^15.11.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.10.0",
+    "vite": "^5.4.9"
+  }
+}

@@ -1,0 +1,20 @@
+name: start test and deploy
+
+on:
+  push:
+    branches: [deploy]
+
+jobs:
+  deploy:
+    name: deploy to server
+    runs-on: self-hosted
+#    needs: test
+    steps:
+      - name: checkout branch
+        run: cd /home/habe/NikitaBersenev.github.io/ && git checkout deploy
+      - name: reset
+        run: cd /home/habe/NikitaBersenev.github.io/ && sudo chmod -R 777 . && git reset --hard
+      - name: git pull
+        run: cd /home/habe/NikitaBersenev.github.io/ && git pull --allow-unrelated-histories -X theirs --no-edit
+      - name: move dist
+        run: cd /home/habe/NikitaBersenev.github.io/ && sudo cp -r dist/ /var/www/
